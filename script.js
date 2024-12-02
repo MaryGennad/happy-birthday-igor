@@ -184,7 +184,7 @@ async function makeChoice(choice) {
           "_blank"
         );
         wishesElement.innerHTML =
-          "Happy birthday! 📱✨<br>💖I am there💖";
+          "Happy birthday! 📱✨<br>Be happy!!!";
       }, 1000);
     }, 2000);
   }
