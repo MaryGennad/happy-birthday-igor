@@ -88,7 +88,7 @@ function createEmoji() {
 }
 
 function stopAllMusic() {
-  const audios = ["bgMusic", "sisterMusic", "bestFriendMusic"];
+  const audios = ["bgMusic", "audio", "sisterMusic", "bestFriendMusic"];
   audios.forEach((id) => {
     const audio = document.getElementById(id);
     if (audio) {
@@ -120,7 +120,7 @@ async function typeWriter(text) {
 let isMuted = false;
 const muteButton = document.getElementById("muteButton");
 muteButton.addEventListener("click", () => {
-  const audios = ["bgMusic", "sisterMusic", "bestFriendMusic"];
+  const audios = ["bgMusic", "audio", "sisterMusic", "bestFriendMusic"];
   isMuted = !isMuted;
   audios.forEach((id) => {
     const audio = document.getElementById(id);
@@ -192,7 +192,7 @@ async function makeChoice(choice) {
 document.getElementById("startBtn").addEventListener("click", async () => {
   document.getElementById("startBtn").style.display = "none";
   document.getElementById("wishesContainer").classList.remove("hidden");
-  const bgAudio = document.getElementById("bgMusic");
+  const bgAudio = document.getElementById("bgMusic", "audio");
   bgAudio.muted = isMuted;
   try {
     const playPromise = bgAudio.play();
@@ -214,7 +214,7 @@ document.getElementById("startBtn").addEventListener("click", async () => {
   });
 });
 document.addEventListener("click", async function initAudio() {
-  const audios = ["bgMusic", "sisterMusic", "bestFriendMusic"];
+  const audios = ["bgMusic", "audio", "sisterMusic", "bestFriendMusic"];
   for (let id of audios) {
     const audio = document.getElementById(id);
     try {
