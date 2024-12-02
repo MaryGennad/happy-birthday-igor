@@ -22,27 +22,27 @@ const wishes = [
 
 
 ];
-const sisterChat = [
-  "Sister? 🤔",
-  "You know what Shalini...",
-  "I have something to confess... 💫",
-  "While sisters are precious...",
-  "I've always felt our bond is different... ✨",
-  "The way we understand each other...",
-  "The way we share everything...",
-  "It feels more like best friends! 💫",
-  "Would you like to be my Best Friend instead? 🌟"
-];
+// const sisterChat = [
+//   "Sister? 🤔",
+//   "You know what Shalini...",
+//   "I have something to confess... 💫",
+//   "While sisters are precious...",
+//   "I've always felt our bond is different... ✨",
+//   "The way we understand each other...",
+//   "The way we share everything...",
+//   "It feels more like best friends! 💫",
+//   "Would you like to be my Best Friend instead? 🌟"
+// ];
 const bestFriendMessages = [
-  "Yaara teri yaari ko maine toh khuda mana 🌟",
-  "Teri dosti ne mujhe jeena sikhaya hai ✨",
-  "Tere jaisa yaar kaha, kaha aisa yarana 💖",
-  "Dosti ki hai, nibhani to padegi",
-  "Koi dhundta hai kisi ko,",
-  "Koi kisi ka sahara hai 🌟",
-  "You're not just my friend Shalini,",
-  "You're my favorite person to annoy! 😋",
-  "Let's be Best Friends Forever! 🤗"
+  "С днём рождения дорогой друг! Желаю здоровья, счастья,  успехов и радости - Никита 🌟",
+  "Дострой Дом своей мечты! - Роман ✨",
+  "Будь в духовном равновесии! - Елена 🌟",
+  "Лесного здоровья, московской зарплаты - Виталий 🌟",
+  "Желаю, больше позитивных моментов, интересных проектов и их успешной реализации! - Илья 🌟",
+  "Желаю вдохновляющих и креативных проектов, которые станут новым достижением в вашей карьере! - Tenay 🌟",
+  " - Алена 😋",
+  " - Юля ",
+  "Best Forever! 🤗"
 ];
 
 function createStars() {
@@ -179,11 +179,12 @@ async function makeChoice(choice) {
     setTimeout(() => {
       setTimeout(() => {
         window.open(
-          "https://www.instagram.com/direct/t/harshpreet_singh_honey",
+          // "https://www.instagram.com/direct/t/harshpreet_singh_honey",
+          "/",
           "_blank"
         );
         wishesElement.innerHTML =
-          "Check your Instagram, Shalini! 📱✨<br>💖I am there💖";
+          "Happy birthday! 📱✨<br>💖I am there💖";
       }, 1000);
     }, 2000);
   }
