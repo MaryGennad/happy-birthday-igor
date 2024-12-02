@@ -192,7 +192,7 @@ async function makeChoice(choice) {
 document.getElementById("startBtn").addEventListener("click", async () => {
   document.getElementById("startBtn").style.display = "none";
   document.getElementById("wishesContainer").classList.remove("hidden");
-  const bgAudio = document.getElementById("bgMusic", "audio");
+  const bgAudio = document.getElementById("audio");
   bgAudio.muted = isMuted;
   try {
     const playPromise = bgAudio.play();
