@@ -19,20 +19,8 @@ const wishes = [
   "Чтобы твоя жизнь только вдохновляла тебя к новым подвигам в работе,",
   "а работа стимулировала к благосостоянию и комфорту в твоем доме.",
   " Поздравляем! 🎂"
-
-
 ];
-// const sisterChat = [
-//   "Sister? 🤔",
-//   "You know what Shalini...",
-//   "I have something to confess... 💫",
-//   "While sisters are precious...",
-//   "I've always felt our bond is different... ✨",
-//   "The way we understand each other...",
-//   "The way we share everything...",
-//   "It feels more like best friends! 💫",
-//   "Would you like to be my Best Friend instead? 🌟"
-// ];
+
 const bestFriendMessages = [
   "С днём рождения дорогой друг! Желаю здоровья, счастья,  успехов и радости - Никита 🌟",
   "Желаю, чтобы каждый день приносил тебе свет внутреннего мира и гармонию с собой - Алена 😋",
@@ -41,7 +29,6 @@ const bestFriendMessages = [
   "Лесного здоровья, московской зарплаты - Виталий 🌟",
   "Желаю, больше позитивных моментов, интересных проектов и их успешной реализации! - Илья 🌟",
   "Желаю вдохновляющих и креативных проектов, которые станут новым достижением в вашей карьере! - Tenay 🌟",
-  " - Юля ",
   "Best Forever! 🤗"
 ];
 
@@ -88,7 +75,7 @@ function createEmoji() {
 }
 
 function stopAllMusic() {
-  const audios = ["bgMusic", "audio", "sisterMusic", "bestFriendMusic"];
+  const audios = ["bgMusic", "sisterMusic", "bestFriendMusic"];
   audios.forEach((id) => {
     const audio = document.getElementById(id);
     if (audio) {
@@ -120,7 +107,7 @@ async function typeWriter(text) {
 let isMuted = false;
 const muteButton = document.getElementById("muteButton");
 muteButton.addEventListener("click", () => {
-  const audios = ["bgMusic", "audio", "sisterMusic", "bestFriendMusic"];
+  const audios = ["bgMusic", "sisterMusic", "bestFriendMusic"];
   isMuted = !isMuted;
   audios.forEach((id) => {
     const audio = document.getElementById(id);
@@ -192,7 +179,7 @@ async function makeChoice(choice) {
 document.getElementById("startBtn").addEventListener("click", async () => {
   document.getElementById("startBtn").style.display = "none";
   document.getElementById("wishesContainer").classList.remove("hidden");
-  const bgAudio = document.getElementById("audio");
+  const bgAudio = document.getElementById("bgMusic");
   bgAudio.muted = isMuted;
   try {
     const playPromise = bgAudio.play();
@@ -214,7 +201,7 @@ document.getElementById("startBtn").addEventListener("click", async () => {
   });
 });
 document.addEventListener("click", async function initAudio() {
-  const audios = ["bgMusic", "audio", "sisterMusic", "bestFriendMusic"];
+  const audios = ["bgMusic", "sisterMusic", "bestFriendMusic"];
   for (let id of audios) {
     const audio = document.getElementById(id);
     try {
